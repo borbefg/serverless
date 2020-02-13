@@ -1,0 +1,24 @@
+service: app-service
+
+provider:
+  name: aws
+  runtime: ruby2.5
+  profile: serverless
+  region: ap-southeast-1
+  stage: dev
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: GET /hello
+  createEvent:
+    handler: handler.api
+    events:
+      - http:
+          method: post
+          path: api
+  oauth2callback:
+    handler: handler.oauth2callback
+    events:
+      - http: GET /oauth2callback
