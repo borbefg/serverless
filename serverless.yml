@@ -8,6 +8,10 @@ provider:
   stage: dev
 
 functions:
+  auth:
+    handler: handler.auth
+    events:
+      - http: GET /auth
   createEvent:
     handler: handler.createEvent
     events:
