@@ -12,6 +12,10 @@ functions:
     handler: handler.auth
     events:
       - http: GET /auth
+  oauth2callback:
+    handler: handler.callback_handler
+    events:
+      - http: GET /oauth2callback
   createEvent:
     handler: handler.createEvent
     events:
