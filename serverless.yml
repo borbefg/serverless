@@ -24,3 +24,11 @@ functions:
           method: post
           private: true
 
+package:
+  exclude:
+    - '**'
+  include:
+    - app/**
+    - vendor/**
+    - '*.rb'
+
