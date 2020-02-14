@@ -55,4 +55,4 @@ build-iPhoneSimulator/
 # package directories
 node_modules
 
-client_secret.json
+test.json

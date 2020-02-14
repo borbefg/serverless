@@ -8,17 +8,11 @@ provider:
   stage: dev
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http: GET /hello
   createEvent:
-    handler: handler.api
+    handler: handler.createEvent
     events:
       - http:
+          path: createEvent
           method: post
-          path: api
-  oauth2callback:
-    handler: handler.oauth2callback
-    events:
-      - http: GET /oauth2callback
+          private: true
+
