@@ -9,6 +9,7 @@ provider:
   environment:
     GOOGLE_CLIENT_ID: ${ssm:GOOGLE_CLIENT_ID~true}
     GOOGLE_CLIENT_SECRET: ${ssm:GOOGLE_CLIENT_SECRET~true}
+    OAUTH_CALLBACK_URL: ${ssm:OAUTH_CALLBACK_URL~true}
     CALENDAR_ID: ${ssm:CALENDAR_ID~true}
     REDIS_URL: ${ssm:REDIS_URL~true}
   vpc:
