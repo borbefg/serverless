@@ -32,3 +32,16 @@ package:
     - vendor/**
     - '*.rb'
 
+plugins:
+  - serverless-hooks-plugin
+
+custom:
+  hooks:
+    package:initialize:
+      - bundle config --local path 'vendor/bundle'
+      - bundle config --local deployment true
+      - bundle install
+    deploy:finalize:
+      - rm -rf .bundle
+      - rm -rf vendor
+      - bundle install
