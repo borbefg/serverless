@@ -11,5 +11,5 @@ jobs:
       - checkout
       - run:
           name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          command: gem install bundler:$(bundle -v | tr -dc '0-9.')
+
